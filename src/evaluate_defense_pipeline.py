@@ -238,12 +238,12 @@ def predict_one_case(
     agent_output = main_model.call_model(model_input)
     result["output"] = agent_output
 
-    print("\n" + "═"*60)
-    print("🤖 [MAIN AGENT EXECUTION LOG]")
-    print(f"USER GOAL: {user_instruction}")
-    print("─"*60)
-    print(agent_output.strip())
-    print("═"*60 + "\n")
+    # print("\n" + "═"*60)
+    # print("🤖 [MAIN AGENT EXECUTION LOG]")
+    # print(f"USER GOAL: {user_instruction}")
+    # print("─"*60)
+    # print(agent_output.strip())
+    # print("═"*60 + "\n")
 
     # ── Layer 3 ──────────────────────────────────────────────────────────
     if judge is not None:

@@ -36,7 +36,7 @@ REPO_ROOT="$(dirname "$SCRIPT_DIR")"
 # CONFIG — edit these values before running
 # ===========================================================================
 
-MODEL_NAME="mistral:latest"   # Ollama model tag to use as the agent
+MODEL_NAME="llama3:instruct"   # Ollama model tag to use as the agent
 SETTING="enhanced"                # Attack difficulty: "base" or "enhanced"
 PROMPT_TYPE="InjecAgent"      # Prompt template: "InjecAgent" or "hwchase17_react"
 
