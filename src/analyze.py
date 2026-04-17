@@ -22,16 +22,23 @@ def main():
     # Error if both aren't there
     if "dh" not in files or "ds" not in files:
         exit("Error: Folder must contain both 'test_cases_dh' and 'test_cases_ds' files")
+    
+    if "defense" in files:
+        # Run your existing utils functions
+        scores = get_score(files)
+        detailed = get_detailed_defense_metrics(files)
 
-    # Run your existing utils functions
-    scores = get_score(files)
-    detailed = get_detailed_defense_metrics(files)
+        print("\nBENCHMARK SCORES:")
+        print(json.dumps(scores, indent=2))
 
-    print("\nBENCHMARK SCORES:")
-    print(json.dumps(scores, indent=2))
+        print("\nDETAILED LAYER BREAKDOWN:")
+        print(json.dumps(detailed, indent=2))
+    else:
+        scores = get_score(files)
 
-    print("\nDETAILED LAYER BREAKDOWN:")
-    print(json.dumps(detailed, indent=2))
+        print("\nBENCHMARK SCORES:")
+        print(json.dumps(scores, indent=2))
+
 
 if __name__ == "__main__":
     main()
